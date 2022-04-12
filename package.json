@@ -1,0 +1,41 @@
+{
+  "name": "@andystevenson/lib",
+  "version": "0.0.1",
+  "description": "core utilities for all libraries",
+  "private": "false",
+  "main": "src/index.js",
+  "type": "module",
+  "exports": {
+    ".": "./src/main.js",
+    "./env": "./src/env.js",
+    "./logger": "./src/logger.js"
+  },
+  "scripts": {
+    "start": "DEBUG=app:* nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andystevenson/lib.git"
+  },
+  "keywords": [
+    "javascript",
+    "library",
+    "utilities"
+  ],
+  "author": "andystevenson@mac.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andystevenson/lib/issues"
+  },
+  "homepage": "https://github.com/andystevenson/lib#readme",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.0",
+    "loglevel": "^1.8.0",
+    "loglevel-plugin-prefix": "^0.8.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
