@@ -2,7 +2,9 @@
   "name": "@andystevenson/lib",
   "version": "0.0.1",
   "description": "core utilities for all libraries",
-  "private": "false",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "src/index.js",
   "type": "module",
   "exports": {
