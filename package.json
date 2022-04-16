@@ -1,6 +1,6 @@
 {
   "name": "@andystevenson/lib",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "core utilities for all libraries",
   "publishConfig": {
     "access": "public"
@@ -34,6 +34,8 @@
     "chalk": "^5.0.1",
     "debug": "^4.3.4",
     "dotenv": "^16.0.0",
+    "getaddress-api": "^1.2.1",
+    "isomorphic-fetch": "^3.0.0",
     "loglevel": "^1.8.0",
     "loglevel-plugin-prefix": "^0.8.4"
   },
