@@ -22,7 +22,6 @@ export default async function (string) {
     const findResult = await api.find(postcode)
     if (findResult.isSuccess) {
       const success = findResult.toSuccess()
-      log.debug('%o', { success })
       return success.addresses
     } else {
       const failed = findResult.toFailed()
