@@ -1,4 +1,13 @@
-import { log, debug, critical, postcode, imagesize } from '@andystevenson/lib'
+import {
+  log,
+  debug,
+  critical,
+  postcode,
+  imagesize,
+  mime,
+} from '@andystevenson/lib'
+
+import path from 'node:path'
 // log.info('hello world')
 // const DEBUG = debug.extend('module')
 // DEBUG('stuff occuring')
@@ -7,9 +16,16 @@ import { log, debug, critical, postcode, imagesize } from '@andystevenson/lib'
 // const p = await postcode('B91 1AH')
 // log.info('%o', { p })
 
+let file = './_site/west-warwicks-social-image.jpeg'
 let size = await imagesize(
   'https://westwarwicks.club/west-warwicks-social-image.png',
 )
 log.info(size)
-size = await imagesize('./_site/west-warwicks-social-image.jpeg')
+size = await imagesize(file)
 log.info(size)
+
+const extension = path.extname(file)
+const type = mime.getType(extension)
+console.log({ type })
+const formalExtension = mime.getExtension(type)
+console.log({ formalExtension })

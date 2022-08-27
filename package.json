@@ -1,6 +1,6 @@
 {
   "name": "@andystevenson/lib",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "core utilities for all libraries",
   "publishConfig": {
     "access": "public"
@@ -14,7 +14,8 @@
     "./url": "./src/url.js",
     "./image-size": "./src/image-size.js",
     "./postcode": "./src/logger.js",
-    "./got": "./src/got.js"
+    "./got": "./src/got.js",
+    "./mime": "./src/mime.js"
   },
   "scripts": {
     "start": "DEBUG=$USER:* nodemon index.js"
@@ -44,6 +45,7 @@
     "isomorphic-fetch": "^3.0.0",
     "loglevel": "^1.8.0",
     "loglevel-plugin-prefix": "^0.8.4",
+    "mime": "^3.0.0",
     "url": "^0.11.0"
   },
   "devDependencies": {
