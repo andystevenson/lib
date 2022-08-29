@@ -1,6 +1,5 @@
 import size from 'image-size'
 import url from 'url'
-import fs from 'node:fs'
 import { Writable } from 'node:stream'
 import { pipeline } from 'node:stream/promises'
 import got from 'got'

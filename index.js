@@ -5,6 +5,7 @@ import {
   postcode,
   imagesize,
   mime,
+  isUrl,
 } from '@andystevenson/lib'
 
 import path from 'node:path'
@@ -29,3 +30,6 @@ const type = mime.getType(extension)
 console.log({ type })
 const formalExtension = mime.getExtension(type)
 console.log({ formalExtension })
+
+console.log(isUrl(`http://example.com`))
+console.log(isUrl(`bar`))
