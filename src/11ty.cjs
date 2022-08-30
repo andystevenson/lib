@@ -16,9 +16,10 @@ module.exports = function (eleventyConfig) {
   shortcodes(eleventyConfig)
   filters(eleventyConfig)
 
-  // eleventyConfig.addPassthroughCopy('public')
-  eleventyConfig.addWatchTarget('./src/sass')
+  eleventyConfig.addPassthroughCopy('public')
   eleventyConfig.addWatchTarget('./public')
+
+  eleventyConfig.addWatchTarget('./src/sass')
 
   // configure global data
   for (const fn in globalData) {

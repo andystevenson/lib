@@ -1,6 +1,6 @@
 {
   "name": "@andystevenson/lib",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "core utilities for all libraries",
   "publishConfig": {
     "access": "public"
