@@ -1,4 +1,5 @@
-const filters = {}
+const decimal = require('./filters/decimal.cjs')
+const filters = { decimal }
 
 module.exports = (eleventyConfig) => {
   for (const filter in filters) {

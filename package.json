@@ -1,6 +1,6 @@
 {
   "name": "@andystevenson/lib",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "core utilities for all libraries",
   "publishConfig": {
     "access": "public"
@@ -38,6 +38,7 @@
   },
   "homepage": "https://github.com/andystevenson/lib#readme",
   "dependencies": {
+    "@andystevenson/lib": "^0.1.0",
     "chalk": "^5.0.1",
     "common-tags": "^1.8.2",
     "debug": "^4.3.4",
