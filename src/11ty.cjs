@@ -1,6 +1,3 @@
-const env = require('./env')
-const build = require('./src/build')
-const meta = require('./src/meta')
 const globalData = {
   env: process.env,
   build: process.env.NODE_ENV === 'production' ? 'production' : 'development',
