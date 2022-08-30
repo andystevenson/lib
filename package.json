@@ -17,7 +17,8 @@
     "./got": "./src/got.js",
     "./mime": "./src/mime.js",
     "./shortcodes": "./src/shortcodes.cjs",
-    "./filters": "./src/filters.cjs"
+    "./filters": "./src/filters.cjs",
+    "./11ty": "./src/11ty.cjs"
   },
   "scripts": {
     "start": "DEBUG=$USER:* nodemon index.js"

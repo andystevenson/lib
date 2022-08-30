@@ -7,6 +7,7 @@ import got from './got.js'
 import isUrl from './isUrl.js'
 import filters from './filters.cjs'
 import shortcodes from './shortcodes.cjs'
+import eleventy from './11ty.cjs'
 
 export {
   log,
@@ -20,6 +21,7 @@ export {
   isUrl,
   filters,
   shortcodes,
+  eleventy,
 }
 
 export default {
@@ -34,4 +36,5 @@ export default {
   isUrl,
   filters,
   shortcodes,
+  eleventy,
 }
