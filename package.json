@@ -1,6 +1,6 @@
 {
   "name": "@andystevenson/lib",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "core utilities for all libraries",
   "publishConfig": {
     "access": "public"
@@ -15,7 +15,9 @@
     "./imagesize": "./src/imagesize.js",
     "./postcode": "./src/logger.js",
     "./got": "./src/got.js",
-    "./mime": "./src/mime.js"
+    "./mime": "./src/mime.js",
+    "./shortcodes": "./src/shortcodes.cjs",
+    "./filters": "./src/filters.cjs"
   },
   "scripts": {
     "start": "DEBUG=$USER:* nodemon index.js"
@@ -37,6 +39,7 @@
   "homepage": "https://github.com/andystevenson/lib#readme",
   "dependencies": {
     "chalk": "^5.0.1",
+    "common-tags": "^1.8.2",
     "debug": "^4.3.4",
     "dotenv": "^16.0.0",
     "getaddress-api": "^1.2.1",
@@ -44,6 +47,7 @@
     "image-size": "^1.0.2",
     "is-url": "^1.2.4",
     "isomorphic-fetch": "^3.0.0",
+    "lodash": "^4.17.21",
     "loglevel": "^1.8.0",
     "loglevel-plugin-prefix": "^0.8.4",
     "mime": "^3.0.0",
