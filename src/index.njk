@@ -2,23 +2,30 @@
 title: "andystevenson/lib"
 layout: "base.njk"
 ---
-{% h2 'Welcome to the whacky world of testing...' %}
 
-{% set paragraph %}
-  {%- p 'hello world &amp; all my friends' -%}
+
+{% set hero %}
+  {% h2 'Welcome to the whacky world of testing...' %}
+
+  {% set paragraph %}
+    {%- p 'hello world &amp; all my friends' -%}
+  {% endset %}
+
+  {% div paragraph %} 
+  {% ncomment 'generates <div><p>hello world</p><div>' %}
+
+  {% set alt = 'my nice & lovely image' | escape %}
+
+  {% img href='/', alt=alt %}
+  {{ paragraph | section }}
+  {{ paragraph | a(href='/')  }}
 {% endset %}
 
-
-{% div paragraph %} 
-{% ncomment 'generates <div><p>hello world</p><div>' %}
-
-{% img href='/', alt='my nice image' %}
-{{ paragraph | section }}
-{{ paragraph | a(href='/')  }}
-
+{% section hero, class='hero', 'data-theme'='dark' %}
 {# call a lodash function to filter the result #}
-{{ paragraph | a(href='#') | unescape }}
+{{ $s.p("a new paragraph") | a(href='#') | section }}
 
 {# utilities ... not html #}
-{%- inspect {a: "string", b: ["flat"] } -%}
+{# {%- inspect {a: "string", b: ["flat"] } -%} #}
 
+{# {% button 'submit', href="foo" | a %} #}

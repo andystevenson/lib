@@ -24,5 +24,5 @@ module.exports = (eleventyConfig) => {
   }
 
   // we can bail out to F.<tag> as a function
-  eleventyConfig.addGlobalData('F', filters)
+  eleventyConfig.addGlobalData('$f', filters)
 }
