@@ -1,6 +1,6 @@
 {
   "name": "@andystevenson/lib",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "description": "core utilities for all libraries",
   "publishConfig": {
     "access": "public"
@@ -55,6 +55,7 @@
     "is-url": "^1.2.4",
     "isomorphic-fetch": "^3.0.0",
     "iterate-iterator": "^1.0.2",
+    "just-permutations": "^2.1.1",
     "lodash": "^4.17.21",
     "loglevel": "^1.8.0",
     "loglevel-plugin-prefix": "^0.8.4",

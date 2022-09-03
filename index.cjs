@@ -1,2 +1,4 @@
-const lib = require('@andystevenson/lib/shortcodes')
-console.log({ lib })
+;(async () => {
+  const { inspect } = (await import('./src/main.js')).default
+  inspect({ truth: 'programming is fun!' })
+})()
