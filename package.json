@@ -1,6 +1,6 @@
 {
   "name": "@andystevenson/lib",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "description": "core utilities for all libraries",
   "publishConfig": {
     "access": "public"
@@ -18,7 +18,9 @@
     "./mime": "./src/mime.js",
     "./shortcodes": "./src/shortcodes.cjs",
     "./filters": "./src/filters.cjs",
-    "./11ty": "./src/11ty.cjs"
+    "./11ty": "./src/11ty.cjs",
+    "./lodash": "./src/lodash.cjs",
+    "./isUrl": "./src/isUrl.cjs"
   },
   "scripts": {
     "start": "DEBUG=$USER:* npx nodemon index.js",
