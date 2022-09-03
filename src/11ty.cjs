@@ -1,9 +1,12 @@
+const { NODE_ENV, WEBSITE_NAME, WEBSITE } = process.env
+
 const globalData = {
   env: process.env,
-  build: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+  build: NODE_ENV === 'production' ? NODE_ENV : 'development',
   meta: {
-    title: 'My Site',
-    description: 'My site is awesome.',
+    title: WEBSITE ? WEBSITE_NAME : "Andy Stevenson's Awesome Website",
+    description: 'an awesome site by Andy Stevenson',
+    email: 'andystevenson@mac.com',
     company: 'andystevenson.dev',
     site: 'https://andystevenson.dev',
   },
@@ -11,15 +14,19 @@ const globalData = {
 
 const shortcodes = require('./shortcodes.cjs')
 const filters = require('./filters.cjs')
+const lodash = require('./lodash.cjs')
 
 module.exports = function (eleventyConfig) {
   shortcodes(eleventyConfig)
   filters(eleventyConfig)
+  lodash(eleventyConfig)
 
   eleventyConfig.addPassthroughCopy('public')
   eleventyConfig.addWatchTarget('./public')
 
-  eleventyConfig.addWatchTarget('./src/sass')
+  eleventyConfig.addWatchTarget('./src/sass/**/*.scss')
+
+  eleventyConfig.addWatchTarget('./src/**/*.cjs')
 
   // configure global data
   for (const fn in globalData) {

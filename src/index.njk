@@ -1,0 +1,24 @@
+---
+title: "andystevenson/lib"
+layout: "base.njk"
+---
+{% h2 'Welcome to the whacky world of testing...' %}
+
+{% set paragraph %}
+  {%- p 'hello world &amp; all my friends' -%}
+{% endset %}
+
+
+{% div paragraph %} 
+{% ncomment 'generates <div><p>hello world</p><div>' %}
+
+{% img href='/', alt='my nice image' %}
+{{ paragraph | section }}
+{{ paragraph | a(href='/')  }}
+
+{# call a lodash function to filter the result #}
+{{ paragraph | a(href='#') | unescape }}
+
+{# utilities ... not html #}
+{%- inspect {a: "string", b: ["flat"] } -%}
+

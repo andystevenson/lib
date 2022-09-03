@@ -21,7 +21,10 @@
     "./11ty": "./src/11ty.cjs"
   },
   "scripts": {
-    "start": "DEBUG=$USER:* nodemon index.js"
+    "start": "DEBUG=$USER:* npx nodemon index.js",
+    "dev": "npx @11ty/eleventy --serve --incremental",
+    "build": "npx @11ty/eleventy",
+    "clean": "rm -rf _site"
   },
   "repository": {
     "type": "git",
@@ -41,21 +44,25 @@
   "dependencies": {
     "@andystevenson/lib": "^0.1.0",
     "chalk": "^5.0.1",
-    "common-tags": "^1.8.2",
     "debug": "^4.3.4",
     "dotenv": "^16.0.0",
+    "es-get-iterator": "^1.1.2",
     "getaddress-api": "^1.2.1",
     "got": "^12.3.1",
     "image-size": "^1.0.2",
     "is-url": "^1.2.4",
     "isomorphic-fetch": "^3.0.0",
+    "iterate-iterator": "^1.0.2",
     "lodash": "^4.17.21",
     "loglevel": "^1.8.0",
     "loglevel-plugin-prefix": "^0.8.4",
     "mime": "^3.0.0",
+    "prettier": "^2.7.1",
     "url": "^0.11.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "@11ty/eleventy": "^2.0.0-canary.15",
+    "nodemon": "^2.0.15",
+    "nunjucks": "^3.2.3"
   }
 }
