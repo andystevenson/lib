@@ -1,6 +1,6 @@
 {
   "name": "@andystevenson/lib",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "core utilities for all libraries",
   "publishConfig": {
     "access": "public"
@@ -24,7 +24,8 @@
     "./shortcodes": "./src/shortcodes.cjs",
     "./url": "./src/url.js",
     "./validators": "./src/validators.js",
-    "./safetify": "./src/util/safetify.cjs"
+    "./safetify": "./src/util/safetify.cjs",
+    "./isAsyncFunction": "./src/util/isAsyncFunction.cjs"
   },
   "scripts": {
     "start": "DEBUG=$USER:* npx nodemon index.js",
