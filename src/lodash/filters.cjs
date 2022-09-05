@@ -7,7 +7,8 @@ const filters = functions.reduce((methods, method) => {
   const isFunction = exists ? typeof lodash[method] === 'function' : true
 
   if (exists && isFunction) {
-    methods[method] = safetify(lodash[method])
+    // methods[method] = safetify(lodash[method])
+    methods[method] = lodash[method]
     return methods
   }
 

@@ -25,6 +25,10 @@ layout: "base.njk"
 {# call a lodash function to filter the result #}
 {{ $s.p("a new paragraph") | a(href='#') | section }}
 
+{{ [{title: 'fred'}, {title: 'joe'}] | find(['title', 'joe']) | inspect }}
+{{ 'hello' | toUpper | inspect }}
+{{ paragraph | toUpper | safe }}
+
 {# utilities ... not html #}
 {# {%- inspect {a: "string", b: ["flat"] } -%} #}
 
