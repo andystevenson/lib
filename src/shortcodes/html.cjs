@@ -127,4 +127,11 @@ const snippets = tags.reduce((all, tag) => {
   return all
 }, {})
 
-module.exports = { shortcodes, snippets }
+module.exports = {
+  shortcodes,
+  snippets,
+  htmlAttributes,
+  innerHTML,
+  stringify,
+  hof,
+}
