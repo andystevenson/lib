@@ -1,4 +1,5 @@
 const util = require('node:util')
+const safetify = require('./util/safetify.cjs')
 const { shortcodes: html } = require('./shortcodes/html.cjs')
 const isAsyncFunction = require('./util/isAsyncFunction.cjs')
 
@@ -7,8 +8,12 @@ const inspect = (...args) => {
   return ''
 }
 
+const safeHtml = {}
+for (const fn in html) {
+  safeHtml[fn] = safetify(html[fn])
+}
 const shortcodes = {
-  ...html,
+  ...safeHtml,
   inspect,
 }
 

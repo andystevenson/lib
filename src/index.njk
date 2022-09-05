@@ -23,11 +23,14 @@ layout: "base.njk"
 
 {% section hero, class='hero', 'data-theme'='dark' %}
 {# call a lodash function to filter the result #}
-{{ $s.p("a new paragraph") | a(href='#') | section }}
+{{ $s.p("a new paragraph") | a(href='#', 'aria-hidden'='true') | section }}
 
 {{ [{title: 'fred'}, {title: 'joe'}] | find(['title', 'joe']) | inspect }}
 {{ 'hello' | toUpper | inspect }}
 {{ paragraph | toUpper | safe }}
+
+{{ $s.img(src='/foo') }}
+{{ $s.p("a new paragraph") | a }}
 
 {# utilities ... not html #}
 {# {%- inspect {a: "string", b: ["flat"] } -%} #}
