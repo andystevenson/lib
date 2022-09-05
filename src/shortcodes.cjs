@@ -24,6 +24,7 @@ module.exports = (eleventyConfig) => {
     isAsync
       ? eleventyConfig.addAsyncShortcode(shortcode, fn)
       : eleventyConfig.addShortcode(shortcode, fn)
+    eleventyConfig.addNunjucksGlobal(shortcode, fn)
   }
 
   // we can bail out to F.<tag> as a function

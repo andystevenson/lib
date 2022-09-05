@@ -88,7 +88,7 @@ const hof = (element) => {
       // the remainder of the attributes (class="xyz" etc) are to be annotated on the element
       let format = htmlAttributes(attributes.slice(1))
       format = format ? ` ${format}` : ''
-      const html = `<${name}${format}>${value}</${name}>`
+      const html = `<${name}${format.trimEnd()}>${value}</${name}>`
 
       try {
         return prettier.format(html, { parser: 'html' })
@@ -102,9 +102,9 @@ const hof = (element) => {
 
     // self closing html tag
     let format = htmlAttributes(attributes)
-    format = format ? ` ${format}` : ''
+    format = format.trim() ? ` ${format}` : ''
     const closeWith = closing ? closing : ''
-    return `<${name}${format}${closeWith}>`
+    return `<${name}${format.trimEnd()}${closeWith}>`
   }
 }
 
