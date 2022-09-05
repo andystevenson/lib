@@ -26,7 +26,7 @@
     "./validators": "./src/validators.js",
     "./safetify": "./src/util/safetify.cjs",
     "./isAsyncFunction": "./src/util/isAsyncFunction.cjs",
-    "./html": "./src/shorcodes/html.cjs"
+    "./html": "./src/shortcodes/html.cjs"
   },
   "scripts": {
     "start": "DEBUG=$USER:* npx nodemon index.js",
