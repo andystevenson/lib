@@ -1,11 +1,11 @@
-import log from 'loglevel'
-import prefix from 'loglevel-plugin-prefix'
-import chalk from 'chalk'
+const log = require('loglevel')
+const prefix = require('loglevel-plugin-prefix')
+const chalk = require('chalk')
 
 export const colors = {
   TRACE: chalk.magenta,
   DEBUG: chalk.cyan,
-  INFO: chalk.blue,
+  INFO: chalk.green,
   WARN: chalk.yellow,
   ERROR: chalk.red,
 }
