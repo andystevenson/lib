@@ -2,7 +2,7 @@ const log = require('loglevel')
 const prefix = require('loglevel-plugin-prefix')
 const chalk = require('chalk')
 
-export const colors = {
+const colors = {
   TRACE: chalk.magenta,
   DEBUG: chalk.cyan,
   INFO: chalk.green,
@@ -10,7 +10,7 @@ export const colors = {
   ERROR: chalk.red,
 }
 
-export default (newColors = colors) => {
+const configure = (newColors = colors) => {
   prefix.reg(log)
   log.enableAll()
 
@@ -43,3 +43,6 @@ export default (newColors = colors) => {
 
   return { log, critical }
 }
+
+module.exports.configure = configure
+module.exports = configure()
