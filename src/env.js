@@ -5,7 +5,7 @@ import debug from 'debug'
 import logger from '@andystevenson/lib/logger'
 
 const d = debug(process.env.APP || 'app')
-const { log, critical } = logger()
+const { log, critical } = logger
 
 export { d as debug, log, critical }
 

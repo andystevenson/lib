@@ -1,6 +1,6 @@
 {
   "name": "@andystevenson/lib",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "description": "core utilities for all libraries",
   "publishConfig": {
     "access": "public"
@@ -20,7 +20,7 @@
     "./logger": "./src/logger.cjs",
     "./mime": "./src/mime.js",
     "./permutations": "./src/permutations.cjs",
-    "./postcode": "./src/logger.js",
+    "./postcode": "./src/postcode.js",
     "./shortcodes": "./src/shortcodes.cjs",
     "./url": "./src/url.js",
     "./validators": "./src/validators.js",
