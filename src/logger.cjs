@@ -10,6 +10,24 @@ const colors = {
   ERROR: chalk.red,
 }
 
+// had to steal this from the has-ansi ESM package
+function ansiRegex({ onlyFirst = false } = {}) {
+  const pattern = [
+    '[\\u001B\\u009B][[\\]()#;?]*(?:(?:(?:(?:;[-a-zA-Z\\d\\/#&.:=?%@~_]+)*|[a-zA-Z\\d]+(?:;[-a-zA-Z\\d\\/#&.:=?%@~_]*)*)?\\u0007)',
+    '(?:(?:\\d{1,4}(?:;\\d{0,4})*)?[\\dA-PR-TZcf-nq-uy=><~]))',
+  ].join('|')
+
+  return new RegExp(pattern, onlyFirst ? undefined : 'g')
+}
+
+const regex = ansiRegex({ onlyFirst: true })
+
+function hasAnsi(string) {
+  return regex.test(string)
+}
+
+const isString = (arg) => typeof arg === 'string' || arg instanceof String
+// configure logger
 const verbose = false
 const configure = (options = { verbose, colors }) => {
   const original = log.methodFactory
@@ -36,7 +54,12 @@ const configure = (options = { verbose, colors }) => {
 
       for (let i = 0; i < arguments.length; i++) {
         const arg = arguments[i]
-        messages.push(color(arg))
+        // if somebody coloured it already don't mess with it
+        if (isString(arg)) {
+          hasAnsi(arg) ? messages.push(arg) : messages.push(color(arg))
+        } else {
+          messages.push(inspect(arg, { depth: null, colors: true }))
+        }
       }
       raw.apply(undefined, messages)
     }
