@@ -1,6 +1,6 @@
 {
   "name": "@andystevenson/lib",
-  "version": "0.2.12",
+  "version": "0.2.13",
   "description": "core utilities for all libraries",
   "publishConfig": {
     "access": "public"
@@ -13,6 +13,7 @@
     "./env": "./src/env.js",
     "./filters": "./src/filters.cjs",
     "./got": "./src/got.js",
+    "./hasSameValues": "./src/hasSameValues.cjs",
     "./imagesize": "./src/imagesize.js",
     "./isUrl": "./src/isUrl.cjs",
     "./inspect": "./src/inspect.cjs",
