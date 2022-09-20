@@ -21,13 +21,6 @@ module.exports = function (eleventyConfig) {
   filters(eleventyConfig)
   lodash(eleventyConfig)
 
-  eleventyConfig.addPassthroughCopy('public')
-  eleventyConfig.addWatchTarget('./public')
-
-  eleventyConfig.addWatchTarget('./src/sass/**/*.scss')
-
-  eleventyConfig.addWatchTarget('./src/**/*.cjs')
-
   // configure global data
   for (const fn in globalData) {
     eleventyConfig.addGlobalData(fn, globalData[fn])
